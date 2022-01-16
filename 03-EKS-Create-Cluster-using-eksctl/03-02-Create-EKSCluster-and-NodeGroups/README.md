@@ -131,6 +131,20 @@ Use putty
 ## Step-06: Update Worker Nodes Security Group to allow all traffic
 - We need to allow `All Traffic` on worker node security group
 
+## Step-07: (Tip)Working and switching between multiple clusters
+```
+To update the kubeconfig with new cluster name :-
+aws eks --region <region-name> update-kubeconfig --name <cluster-name>
+
+To get the list of available contexts(clusters) for kubeconfig :-
+kubectl config get-contexts
+
+To get the current context in use :-
+kubectl config current-context
+
+To switch to another context(Cluster) :-
+kubectl config use-context <context-name>
+```
 ## Additional References
 - https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
 - https://docs.aws.amazon.com/eks/latest/userguide/create-service-account-iam-policy-and-role.html
