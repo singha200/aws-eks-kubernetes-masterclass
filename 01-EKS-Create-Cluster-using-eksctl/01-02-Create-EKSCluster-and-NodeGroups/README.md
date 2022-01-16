@@ -19,11 +19,17 @@ eksctl create cluster --name=eksdemo1 \
                       --region=us-east-1 \
                       --zones=us-east-1a,us-east-1b \
                       --without-nodegroup 
+or 
+you can use eksctl config file to put all configuration values and run as single command 
+
+eksctl create cluster -f eksctl-create-ng.yaml 
 
 # Get List of clusters
 eksctl get cluster                  
 ```
 
+## Note: eksctl now creates managed nodegroups when a config file isn't specified.
+More Info - https://eksctl.io/usage/managed-nodegroups-announcement
 ## Step-02: Create & Associate IAM OIDC Provider for our EKS Cluster
 - To enable and use AWS IAM roles for Kubernetes service accounts on our EKS cluster, we must create &  associate OIDC identity provider.
 - To do so using `eksctl` we can use the  below command. 
@@ -112,7 +118,7 @@ kubectl config view --minify
 - Verify Control Plane Stack & Events
 - Verify NodeGroup Stack & Events
 
-### Login to Worker Node using Keypai kube-demo
+### Login to Worker Node using Key-pair kube-demo
 - Login to worker node
 ```
 # For MAC or Linux or Windows10
