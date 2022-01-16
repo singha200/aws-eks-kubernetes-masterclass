@@ -39,7 +39,7 @@ aws-cli/2.0.8 Python/3.7.5 Windows/10 botocore/2.0.0dev12
 
 ### Step-01-03: Configure AWS Command Line using Security Credentials
 - Go to AWS Management Console --> Services --> IAM
-- Select the IAM User: kalyan 
+- Select the IAM User: demouser
 - **Important Note:** Use only IAM user to generate **Security Credentials**. Never ever use Root User. (Highly not recommended)
 - Click on **Security credentials** tab
 - Click on **Create access key**
@@ -47,8 +47,8 @@ aws-cli/2.0.8 Python/3.7.5 Windows/10 botocore/2.0.0dev12
 - Go to command line and provide the required details
 ```
 aws configure
-AWS Access Key ID [None]: ABCDEFGHIAZBERTUCNGG  (Replace your creds when prompted)
-AWS Secret Access Key [None]: uMe7fumK1IdDB094q2sGFhM5Bqt3HQRw3IHZzBDTm  (Replace your creds when prompted)
+AWS Access Key ID [None]: xxxxxxxxxxxxxxxxx  (Replace your creds when prompted)
+AWS Secret Access Key [None]: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  (Replace your creds when prompted)
 Default region name [None]: us-east-1
 Default output format [None]: json
 ```
@@ -83,9 +83,8 @@ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile
 
 # Verify the kubectl version
 kubectl version --short --client
-Output: Client Version: v1.16.8-eks-e16311
+Output: Client Version: v1.21.2-13+d2965f0db10712
 ```
-
 
 ### Step-02-02: Windows 10 - Install and configure kubectl
 - Install kubectl on Windows 10 
@@ -96,7 +95,7 @@ curl -o kubectl.exe https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04
 ```
 - Update the system **Path** environment variable 
 ```
-C:\Users\KALYAN\Documents\kubectlbinary
+C:\Users\demouser\Documents\kubectlbinary
 ```
 - Verify the kubectl client version
 ```
@@ -118,6 +117,7 @@ brew install weaveworks/tap/eksctl
 
 # Verify eksctl version
 eksctl version
+output: 0.79.0
 ```
 
 ### Step-03-02: eksctl on windows or linux
