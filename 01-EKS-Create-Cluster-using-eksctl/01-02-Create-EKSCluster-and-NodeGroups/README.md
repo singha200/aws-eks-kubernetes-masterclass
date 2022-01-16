@@ -11,7 +11,6 @@
 - Create EKS Node Groups
 - Verify Cluster, Node Groups, EC2 Instances, IAM Policies and Node Groups
 
-
 ## Step-01: Create EKS Cluster using eksctl
 - It will take 15 to 20 minutes to create the Cluster Control Plane 
 ```
@@ -24,7 +23,6 @@ eksctl create cluster --name=eksdemo1 \
 # Get List of clusters
 eksctl get cluster                  
 ```
-
 
 ## Step-02: Create & Associate IAM OIDC Provider for our EKS Cluster
 - To enable and use AWS IAM roles for Kubernetes service accounts on our EKS cluster, we must create &  associate OIDC identity provider.
@@ -44,12 +42,14 @@ eksctl utils associate-iam-oidc-provider \
     --approve
 ```
 
-
-
 ## Step-03: Create EC2 Keypair
 - Create a new EC2 Keypair with name as `kube-demo`
 - This keypair we will use it when creating the EKS NodeGroup.
 - This will help us to login to the EKS Worker Nodes using Terminal.
+
+```
+aws ec2 create-key-pair --key-name kube-demo --query 'KeyMaterial' --output text > kube-demo.pem
+```
 
 ## Step-04: Create Node Group with additional Add-Ons in Public Subnets
 - These add-ons will create the respective IAM policies for us automatically within our Node Group role.
