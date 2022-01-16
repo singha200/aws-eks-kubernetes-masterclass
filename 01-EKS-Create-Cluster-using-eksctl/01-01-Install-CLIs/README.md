@@ -1,9 +1,9 @@
 # Install AWS, kubectl & eksctl CLI's
 
 ## Step-00: Introduction
-- Install AWS CLI
-- Install kubectl CLI
-- Install eksctl CLI
+- Install AWS CLI      #https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+- Install kubectl CLI  #https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+- Install eksctl CLI   #https://eksctl.io/introduction/
 
 ## Step-01: Install AWS CLI
 - Reference-1: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
