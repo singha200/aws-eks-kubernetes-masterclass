@@ -1,6 +1,6 @@
 # EKS - Vertical Pod Autoscaling (VPA)
 
-### DO NOT USE IN PRODUCTION - RESTARTS PODS
+# DO NOT USE IN PRODUCTION - RESTARTS PODS
 
 ## Step-01: Introduction
 - The Kubernetes Vertical Pod Autoscaler automatically adjusts the CPU and memory reservations for your pods to help "right size" your applications. 
