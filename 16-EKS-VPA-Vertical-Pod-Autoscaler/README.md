@@ -3,8 +3,13 @@
 # NOT RECOMMENDED TO USE IN PRODUCTION - RESTARTS PODS
 
 ## Step-01: Introduction
-- The Kubernetes Vertical Pod Autoscaler automatically adjusts the CPU and memory reservations for your pods to help "right size" your applications. 
+- The Kubernetes Vertical Pod Autoscaler automatically adjusts the CPU and memory reservations for your pods to help "right size" your applications. (After restart)
 - This adjustment can improve cluster resource utilization and free up CPU and memory for other pods. 
+- Used in dev to determine optimal CPU and Memory for the pod
+  VPA recommends pod request, limit
+  Use the number for requests, limits, HPA 
+  VPA should not be used with HPA
+# Goldilocks # Practical and Useful application of VPA
 
 ## Step-02: Pre-requisite - Metric server
 - Metric server should be installed & ready, we have done that as part of HPA
