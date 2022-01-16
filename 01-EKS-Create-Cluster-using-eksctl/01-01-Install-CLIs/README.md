@@ -63,13 +63,16 @@ aws ec2 describe-vpcs
 - Reference: https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
 
 ### Step-02-01: MAC - Install and configure kubectl
-- Kubectl version we are using here is 1.16.8 (It may vary based on Cluster version you are planning use in AWS EKS)
+- Kubectl version we are using here is 1.21.1 (It may vary based on Cluster version you are planning use in AWS EKS)
+
+## Note
+You must use a kubectl version that is within one minor version difference of your Amazon EKS cluster control plane. For example, a 1.20 kubectl client works with Kubernetes 1.19, 1.20 and 1.21 clusters.
 
 ```
 # Download the Package
 mkdir kubectlbinary
 cd kubectlbinary
-curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/darwin/amd64/kubectl
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/kubectl
 
 # Provide execute permissions
 chmod +x ./kubectl
