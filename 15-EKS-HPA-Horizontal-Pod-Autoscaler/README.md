@@ -11,7 +11,7 @@
 kubectl -n kube-system get deployment/metrics-server
 
 # Install Metrics Server
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.6/components.yaml
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.5.2/components.yaml
 
 # Verify
 kubectl get deployment metrics-server -n kube-system
